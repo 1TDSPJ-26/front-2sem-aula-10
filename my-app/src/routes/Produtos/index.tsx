@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import type { TipoProduto } from "../../types/types";
 import { listaProdutos } from "../../data/listaprodutos";
+import { Link } from "react-router/internal/react-server-client";
 
 export default function Produtos() {
 
   const [produtos, setProdutos] = useState<TipoProduto[]>([]);
 
-  useEffect( ()=> {
+  useEffect(() => {
     setProdutos(listaProdutos);
   }, []);
 
@@ -19,14 +20,16 @@ export default function Produtos() {
             <th>Id</th>
             <th>Nome</th>
             <th>Preço</th>
+            <th>AÇÕES</th>
           </tr>
         </thead>
         <tbody>
-          {produtos.map( (p) => (
+          {produtos.map((p) => (
             <tr>
               <td>{p.id}</td>
               <td>{p.nome}</td>
               <td>{p.preco}</td>
+              <td><Link to={`/editar-produtos/${p.id}`}>EDITAR</Link></td>
             </tr>
           ))}
         </tbody>
