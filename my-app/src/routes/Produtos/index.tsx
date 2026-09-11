@@ -2,6 +2,7 @@ import type { TipoProduto } from "../../types/types";
 import { listaProdutos } from "../../data/listaProdutos";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import { MdEdit as Editar} from "react-icons/md";
 
 export default function Produtos(){
     const[produtos, setProdutos] = useState<TipoProduto[]>([]);
@@ -29,7 +30,7 @@ export default function Produtos(){
                             <td>{p.id}</td>
                             <td>{p.nome}</td>
                             <td>{p.preco}</td>
-                            <td><Link to={`/editar-produtos/${p.id}`}>EDITAR</Link></td>
+                            <td><Link to={`/editar-produtos/${p.id}`}><Editar /></Link></td>
                         </tr>
                     ))}
                 </tbody>
