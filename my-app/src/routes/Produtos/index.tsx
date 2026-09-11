@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import type { TipoProduto } from "../../types/types";
 import { listaProdutos } from "../../data/listaprodutos";
+import { Link } from "react-router-dom";
 
 export default function Produtos() {
 
@@ -17,6 +18,7 @@ export default function Produtos() {
                         <th>ID</th>
                         <th>NOME</th>
                         <th>PREÇO</th>
+                        <th>AÇÕES</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,6 +27,7 @@ export default function Produtos() {
                             <td>{p.id}</td>
                             <td>{p.nome}</td>
                             <td>{p.preco}</td>
+                            <td><Link to={`/editar-produtos/${p.id}`}>EDITAR</Link></td>
                         </tr>
                     ))}
                 </tbody>
