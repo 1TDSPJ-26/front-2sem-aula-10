@@ -13,12 +13,11 @@ export default function Produtos() {
   // - Avisamos ao TypeScript que ele vai guardar uma lista de TipoProduto: <TipoProduto[]>
   const [produtos, setProdutos] = useState<TipoProduto[]>([]);
 
-  // O useEffect vai entrar aqui no Passo 5...
+    // O useEffect vai entrar aqui no Passo 5...
     // Esse efeito roda automaticamente quando a tela é montada
   useEffect(() => {
     // Pegamos a listaProdutos do arquivo e guardamos dentro do useState
     setProdutos(listaProdutos);
-
     // O array vazio [] no final é o "segredo":
     // Ele diz ao React: "Execute isso APENAS UMA VEZ, quando o componente nascer na tela".
     // Se não colocar esse [], o React entraria em um loop infinito!
@@ -35,7 +34,7 @@ export default function Produtos() {
         
         {/* Cabeçalho da Tabela */}
         <thead>
-          <tr style={{ backgroundColor: '#2c3e50', color: '#ffffff' }}>
+          <tr style={{ backgroundColor: '#dcdf40', color: '#000000' }}>
             <th>Foto</th>
             <th>ID</th>
             <th>Nome</th>
@@ -68,6 +67,11 @@ export default function Produtos() {
           ))}
         </tbody>
 
+        <tfoot>
+          <tr>
+            <td colSpan={5}>Quantidade de produtos: {produtos.length}</td>
+          </tr>
+        </tfoot>
       </table>
     </main>
   );
