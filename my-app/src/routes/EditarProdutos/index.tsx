@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
+import type { TipoProduto } from "../types/types";
+
 //Criando uma interface para o tipo de dados que o componente vai receber
 
 //interface Produto {
