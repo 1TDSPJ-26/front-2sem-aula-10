@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import type { TipoProduto } from "../../types/types";
 import { listaProdutos } from "../../data/listaProdutos";
+import { Link } from "react-router";
+import { CiEdit as Editar } from "react-icons/ci";
 
 export default function Produtos() {
 
@@ -26,6 +28,7 @@ export default function Produtos() {
             <th>Nome</th>
             <th>Preço</th>
             <th>Descrição</th>
+            <th>Editar</th>
           </tr>
         </thead>
 
@@ -49,6 +52,7 @@ export default function Produtos() {
               {/* toFixed(2) garante que o preço sempre tenha 2 casas decimais (ex: 299.90) */}
               <td>R$ {item.preco.toFixed(2)}</td>
               <td>{item.descricao}</td>
+              <td> <Link to={`/editar-produtos/${item.id}`}> <Editar /> </Link></td>
             </tr>
           ))}
         </tbody>
