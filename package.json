@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/1TDSPJ-26/front-2sem-aula-08/issues"
   },
-  "homepage": "https://github.com/1TDSPJ-26/front-2sem-aula-08#readme"
+  "homepage": "https://github.com/1TDSPJ-26/front-2sem-aula-08#readme",
+  "dependencies": {
+    "react-icons": "^5.7.0"
+  }
 }
