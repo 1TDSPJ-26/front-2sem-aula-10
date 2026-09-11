@@ -13,6 +13,8 @@ import type { listaProdutos } from "../../data/listaProdutos"
 
 
 
+
+
 export default function EditarProdutos() {
 
   const { id } = useParams<string>();
