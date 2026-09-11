@@ -1,5 +1,5 @@
 // src/data/listaProdutos.ts
-import { type TipoProduto } from '../types/types';
+import type { TipoProduto } from '../types/types';
 
 // Usamos TipoProduto[] com colchetes para avisar que é uma LISTA (Array) desse molde.
 export const listaProdutos: TipoProduto[] = [
