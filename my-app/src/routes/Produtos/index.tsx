@@ -6,6 +6,7 @@ import { type TipoProduto } from '../../types/types';
 
 // 3. Os dados fictícios
 import { listaProdutos } from '../../data/listaProdutos';
+import { Link } from 'react-router';
 
 export default function Produtos() {
   // Criamos o estado "produtos". 
@@ -40,6 +41,7 @@ export default function Produtos() {
             <th>Nome</th>
             <th>Preço</th>
             <th>Descrição</th>
+            <th>Ações</th>
           </tr>
         </thead>
 
@@ -63,13 +65,16 @@ export default function Produtos() {
               {/* toFixed(2) garante que o preço sempre tenha 2 casas decimais (ex: 299.90) */}
               <td>R$ {item.preco.toFixed(2)}</td>
               <td>{item.descricao}</td>
+              <td>
+                <Link to={`/editar-produto/${item.id}`}>Editar</Link>
+              </td>
             </tr>
           ))}
         </tbody>
 
         <tfoot>
           <tr>
-            <td colSpan={5}>Quantidade de produtos: {produtos.length}</td>
+            <td colSpan={6}>Quantidade de produtos: {produtos.length}</td>
           </tr>
         </tfoot>
       </table>
