@@ -1,26 +1,8 @@
 import { useEffect, useEffectEvent, useState } from "react";
 import { useParams } from "react-router";
+import type { TipoProduto } from "../../types/types";
+import { listaProdutos } from "../../data/listaProdutos";
 
-//Criando uma interface para o tipo de dados que o componente vai receber
-//interface Produto{ 
-//    id: number;
-//    nome: string;
-//    preco: number;
-//}
-
-//Criando um tipo de dados para o componente
-type TipoProduto = { 
-    id: number;
-    nome: string;
-    preco: number;
-}
-
-//Criando um arry de produtos
-const listaProdutos:TipoProduto[] = [
-    { id: 1, nome: "Produto 1", preco: 10.0 },
-    { id: 2, nome: "Produto 2", preco: 20.0 },
-    { id: 3, nome: "Produto 3", preco: 30.0 },
-];
 
 export default function EditarProdutos() {
 
