@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
-import type { TipoProduto } from "../types/types";
+import type { TipoProduto } from "../../types/types";
 
 //Criando uma interface para o tipo de dados que o componente vai receber
 
@@ -18,15 +18,15 @@ import type { TipoProduto } from "../types/types";
 
 //Criando um tipo de dados para o componente
 
-type TipoProduto = {
+// type TipoProduto = {
 
-    id: number;
+//     id: number;
 
-    nome: string;
+//     nome: string;
 
-    preco: number
+//     preco: number
 
-}
+// }
 
 
 
