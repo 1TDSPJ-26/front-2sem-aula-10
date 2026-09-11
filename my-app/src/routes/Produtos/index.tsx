@@ -7,6 +7,7 @@ import { type TipoProduto } from '../../types/types';
 // 3. Os dados fictícios
 import { listaProdutos } from '../../data/listaProdutos';
 import { Link } from 'react-router';
+import { CiEdit as Editar } from "react-icons/ci";
 
 export default function Produtos() {
   // Criamos o estado "produtos". 
@@ -66,7 +67,7 @@ export default function Produtos() {
               <td>R$ {item.preco.toFixed(2)}</td>
               <td>{item.descricao}</td>
               <td>
-                <Link to={`/editar-produto/${item.id}`}>Editar</Link>
+                <Link to={`/editar-produto/${item.id}`}><Editar className='w-10 h-10'/></Link>
               </td>
             </tr>
           ))}
