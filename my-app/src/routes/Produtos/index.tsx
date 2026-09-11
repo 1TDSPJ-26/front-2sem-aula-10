@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import type { TipoProduto } from "../../types/types"
 import { listaProdutos } from "../../data/listaProdutos";
 import { Link } from "react-router";
-import { CiCreditCard1 as Editar} from "react-icons/ci";
+import { CiEdit as Editar} from "react-icons/ci";
 
 export default function Produtos(){
 
