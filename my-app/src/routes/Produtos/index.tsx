@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { TipoProduto } from "../../types/types";
 import { listaProdutos } from "../../data/listaProdutos";
 import { Link } from "react-router";
+import { CiEdit  as Edtitar} from "react-icons/ci";
 
 export default function Produtos() {
 
@@ -29,7 +30,7 @@ export default function Produtos() {
                 <td>{p.id}</td>
                 <td>{p.nome}</td>
                 <td>{p.preco}</td>
-                <td><Link to={`/editar-produtos/${p.id}`}>EDITAR</Link></td>
+                <td><Link to={`/editar-produtos/${p.id}`}><Edtitar/></Link></td>
               </tr>
             ))}
           </tbody>
