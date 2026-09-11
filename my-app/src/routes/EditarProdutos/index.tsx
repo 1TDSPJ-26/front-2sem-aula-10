@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router"
+import type { TipoProduto } from "../../types/types";
+import { listaProdutos } from "../../data/listaProdutos";
 
 // interface Produto{
 //     id: number;
@@ -7,18 +9,6 @@ import { useParams } from "react-router"
 //     preco: number
 // }
 
-type TipoProduto = {
-    id: number;
-    nome: string;
-    preco: number
-}
-
-
-const listaProdutos:TipoProduto[] = [
-    { id: 1, nome: "Produto 1", preco: 10.0 },
-    { id: 2, nome: "Produto 2", preco: 20.0 },
-    { id: 3, nome: "Produto 3", preco: 30.0 },
-];
 
 export default function EditarProdutos() {
 
