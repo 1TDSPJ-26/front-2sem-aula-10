@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import type { TipoProduto } from "../../types/types";
+import { listaProdutos } from "../../data/ListaProdutos";
 
 //Criando uma interface para o tipo de dados que o componente vai receber
 //interface Produto {
@@ -9,19 +11,10 @@ import { useParams } from "react-router";
 //}
 
 //Criando um tipo de dados para o componente
-type TipoProduto = {
-  id: number;
-  nome: string;
-  preco: number
-}
+
 
 //Criando um array de produtos
-const listaProdutos:TipoProduto[] = [
-    { id: 1, nome: "Produto 1", preco: 10.0 },
-    { id: 2, nome: "Produto 2", preco: 20.0 },
-    { id: 3, nome: "Produto 3", preco: 30.0 },
-    { id: 10, nome: "Produto 10", preco: 50.0 },
-];
+
 
 export default function EditarProdutos() {
 
@@ -30,10 +23,8 @@ export default function EditarProdutos() {
   // const[produto, setProduto] = useState<{id:number, nome:string, preco:number}>();
   const[produto, setProduto] = useState<TipoProduto>({} as TipoProduto);
 
-  useEffect(() => {
-    
+  useEffect(() => {    
     const prodEncontrado = listaProdutos.find( (p)=> p.id === Number(id) );
-
     setProduto(prodEncontrado!);
     
   }, [])
